@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background: rgb(175, 103, 233);
+  background: linear-gradient(
+    180deg,
+    rgba(175, 103, 233, 1) 0%,
+    rgba(101, 101, 231, 1) 100%
+  );
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+
+.faq-card {
+  height: 30rem;
+  width: 60rem;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 3rem 3rem;
+  margin: 10rem 10rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.section-1 {
+}
+
+.section-2 {
+}
