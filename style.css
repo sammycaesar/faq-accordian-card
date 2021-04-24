@@ -1,6 +1,8 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 html,
@@ -14,23 +16,80 @@ body {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  font-family: "Kumbh Sans", sans-serif;
   font-size: 12px;
+  display: flex;
+}
+
+h1 {
+  padding: 0px 0px 20px 0px;
 }
 
 .faq-card {
-  height: 30rem;
-  width: 60rem;
+  height: 35rem;
+  width: 70rem;
   background-color: white;
   border-radius: 2rem;
-  padding: 3rem 3rem;
-  margin: 10rem 10rem;
+  box-shadow: rgb(59, 41, 101) 0px 20px 50px -10px;
+  margin: 12rem 12rem;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+  overflow: hidden;
 }
 
-.section-1 {
+.illustrations {
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 115% 65%;
+  padding: 0;
+  margin: 0;
 }
 
-.section-2 {
+.woman-desktop {
+  margin-top: 6rem;
+  margin-left: -5rem;
+  height: 24rem;
+  width: 34rem;
+}
+
+.box-desktop {
+  z-index: 1;
+  position: absolute;
+  margin-top: 13.5rem;
+  margin-left: -7.5rem;
+  overflow: visible;
+}
+
+/* Accordion */
+
+.accordion {
+  margin: 6rem 6rem 6rem 0;
+  overflow: hidden;
+}
+
+.accordion-question {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 18px 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.accordion-btn {
+  float: right;
+}
+
+.accordion-answer {
+  padding: 0 18px;
+  background-color: transparent;
+  display: none;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
 }
