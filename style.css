@@ -21,6 +21,7 @@ body {
 }
 
 h1 {
+  font-size: 35px;
   padding: 0px 0px 20px 0px;
 }
 
@@ -62,7 +63,8 @@ h1 {
   overflow: visible;
 }
 
-.woman-mobile {
+.woman-mobile,
+.pattern-mobile {
   display: none;
 }
 
@@ -85,6 +87,10 @@ h1 {
   border-bottom: 1px solid hsl(240, 5%, 91%);
 }
 
+.accordion-question:hover {
+  color: hsl(14, 88%, 65%);
+}
+
 .accordion-btn {
   float: right;
 }
@@ -99,17 +105,19 @@ h1 {
 @media screen and (max-width: 768px) {
   .faq-card {
     display: flex;
+    position: relative;
     text-align: center;
-    margin: 8rem 2rem;
+    margin: 20vh 2rem;
     padding: 2rem;
     width: 30rem;
-    height: 50rem;
+    height: 40rem;
   }
 
-  .woman-mobile {
+  .woman-mobile,
+  .pattern-mobile {
     display: block;
     position: fixed;
-    top: -80%;
+    top: -77%;
     left: -55%;
     width: 200%;
     height: 200%;
@@ -120,14 +128,23 @@ h1 {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 5%;
     margin: auto;
     min-width: 12%;
     min-height: 12%;
   }
 
+  .pattern-mobile img {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
   .accordion {
-    padding: 1rem;
+    padding: 40% 0.1rem 1rem 0.1rem;
   }
 
   .woman-desktop {
