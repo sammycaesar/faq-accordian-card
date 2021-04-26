@@ -62,10 +62,15 @@ h1 {
   overflow: visible;
 }
 
+.woman-mobile {
+  display: none;
+}
+
 /* Accordion */
 
 .accordion {
-  margin: 6rem 6rem 6rem 0;
+  position: flex;
+  padding: 6rem 6rem 6rem 0;
   overflow: hidden;
 }
 
@@ -92,4 +97,47 @@ h1 {
 
 /* Mobile View */
 @media screen and (max-width: 768px) {
+  .faq-card {
+    display: flex;
+    text-align: center;
+    margin: 8rem 2rem;
+    padding: 2rem;
+    width: 30rem;
+    height: 50rem;
+  }
+
+  .woman-mobile {
+    display: block;
+    position: fixed;
+    top: -80%;
+    left: -55%;
+    width: 200%;
+    height: 200%;
+  }
+
+  .woman-mobile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 12%;
+    min-height: 12%;
+  }
+
+  .accordion {
+    padding: 1rem;
+  }
+
+  .woman-desktop {
+    display: none;
+  }
+
+  .box-desktop {
+    display: none;
+  }
+  .illustrations {
+    display: none;
+  }
 }
