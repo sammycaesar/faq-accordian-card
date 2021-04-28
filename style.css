@@ -85,21 +85,32 @@ h1 {
   text-align: left;
   outline: none;
   border-bottom: 1px solid hsl(240, 5%, 91%);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .accordion-question:hover {
   color: hsl(14, 88%, 65%);
 }
 
-.accordion-btn {
-  float: right;
-}
-
 .accordion-answer {
-  padding: 0 18px;
-  display: none;
+  padding: 18px 0px;
   overflow: hidden;
   background-color: transparent;
+}
+
+.accordion-question + .accordion-answer {
+  display: none;
+}
+
+.accordion-question.active + .accordion-answer {
+  display: block;
+}
+
+.accordion-btn {
+  float: right;
 }
 
 /* Mobile View */

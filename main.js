@@ -1,35 +1,22 @@
 "use strict";
 
-// // Variables;
-// const questionClicked = document.querySelectorAll("#question");
-// const displayAnswer = document.getElementsByClassName("accordion-answer");
+//Accordion Question Variable
+const questionClicked = document.querySelectorAll(".accordion-question");
 
-// //When user triggers a question, answer is revealed
-// document.addEventListener("click", (e) => {
-//   this.classList.add("accordian-answer");
-//   if (displayAnswer.style.maxHeight) {
-//     displayAnswer.style.maxHeight = null;
-//   } else {
-//     displayAnswer.style.maxHeight = displayAnswer.scrollHeight + "px";
-//   }
-// });
+//When user interacts with FAQ accordion
+questionClicked.forEach((accordionQuestion) => {
+  accordionQuestion.addEventListener("click", () => {
+    //When users click accordion question to open answer
+    if (accordionQuestion.classList.contains("active")) {
+      accordionQuestion.classList.remove("active");
 
-// Collapses a expanded question
-
-var questionClicked = document.querySelectorAll("#question");
-let displayAnswer = document.getElementsByClassName("accordion-answer");
-var i;
-
-for (i = 0; i < questionClicked.length; i++) {
-  questionClicked[i].addEventListener("click", (e) => {
-    console.log("Question clicked");
-
-    if (displayAnswer.style.display === "block") {
-      displayAnswer.style.display = "none";
-      this.classList.remove("accordian-answer");
+      //When another accordion question is clicked and will close previous accordion tab
     } else {
-      displayAnswer.style.display = "block";
-      this.classList.toggle("accordian-answer");
+      const accordionQuestionOpen = document.querySelectorAll("active");
+      accordionQuestionOpen.forEach((accordionQuestionOpen) => {
+        accordionQuestionOpen.classList.remove("active");
+      });
+      accordionQuestion.classList.add("active");
     }
   });
-}
+});
